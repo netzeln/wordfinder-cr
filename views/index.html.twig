@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="/css/bootstrap-theme.min.css" type="text/css">
+        <link rel="stylesheet" href="/css/styles.css" type="text/css">
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>The Great Word Counter</h2>
+        </div>
+
+        <div class="container">
+            <form action="/display" method="get">
+                <div class="form-group">
+                    <label for="word">Enter a Word for which to search:</label>
+                    <input type="text" name="word" id="search_word">
+                </div>
+                <div class="form-group">
+                    <label for="sentence">Enter a Sentence to search:</label>
+                    <textarea name="sentence" id="search_sentence"></textarea>
+                </div>
+                <button class="btn btn-lg btn-primary" type="submit">Count 'em Up!</button>
+
+            </form>
+
+        </div>
+
+    </body>
+</html>
