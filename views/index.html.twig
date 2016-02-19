@@ -27,6 +27,13 @@
             </form>
 
         </div>
+        <div class="container results">
+            {% if count is not empty %}
+            <h2>The word: <strong> <span class="theWord">{{word}}</strong></span> appears in the sentence <em>"{{sentence}}"</em><span class="theCount"> {{count}}</span> times!</h2>
+            {% endif %}
+
+
+        </div>
 
     </body>
 </html>
