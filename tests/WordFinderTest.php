@@ -77,19 +77,30 @@ class  WordFinderTest  extends PHPUnit_Framework_TestCase{
 
     }
 
-    ///TEst for checking styling feature
-    // function test_WordFinder_styler()
-    // {
-    //     //arrange
-    //     $test_WordFinder = new WordFinder("owl", "owl");
-    //
-    //     //act
-    //     $result = $test_WordFinder->styleSentence();
-    //
-    //     //assert
-    //     $this->assertEquals("<span class='theWord'>owl</span>", $result);
-    // }
+    //TEst for checking styling feature
+    function test_WordFinder_styler()
+    {
+        //arrange
+        $test_WordFinder = new WordFinder("owl", "owl");
 
+        //act
+        $result = $test_WordFinder->styleSentence2("nope");
+
+        //assert
+        $this->assertEquals("<span class='theWord'>owl</span>", $result);
+    }
+
+    function test_WordFinder_stylerCase()
+    {
+        //arrange
+        $test_WordFinder = new WordFinder("owl", "Owl");
+
+        //act
+        $result = $test_WordFinder->styleSentence2("yes");
+
+        //assert
+        $this->assertEquals("<span class='theWord'>Owl</span>", $result);
+    }
 
 }
  ?>

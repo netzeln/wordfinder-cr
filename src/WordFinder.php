@@ -70,4 +70,29 @@ class WordFinder {
     //         return $styledSentence;
     //     }
     // }
+
+    function styleSentence2($plural)
+    {
+        if($plural == "yes")
+        {
+            $foundPattern = preg_split("/\b($this->word+?)(s\b|\b)/i", $this->sentence, 0, PREG_SPLIT_DELIM_CAPTURE);
+        }
+        else 
+        {
+            $foundPattern = preg_split("/\b($this->word\b)/i", $this->sentence, 0, PREG_SPLIT_DELIM_CAPTURE);
+        }
+
+        $styledPattern = array();
+        foreach($foundPattern as $found)
+        {
+            if (strtolower($found) == strtolower($this->word))
+            {
+                array_push($styledPattern,"<span class='theWord'>$found</span>");
+            } else{
+                array_push($styledPattern, $found);
+            }
+        }
+
+        return implode($styledPattern);
+    }
 } ?>

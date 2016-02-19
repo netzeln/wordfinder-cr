@@ -23,7 +23,8 @@
             $count = $newWordFinder->countWords();
         }
         // $styleIt = $newWordFinder->styleSentence($_GET['pluralOK']);
-      return $app['twig']->render("index.html.twig", array('count' => $count, 'word' => $_GET['word'], 'sentence' => $_GET['sentence']));
+        $styleIt = $newWordFinder->styleSentence2($_GET['pluralOK']);
+      return $app['twig']->render("index.html.twig", array('count' => $count, 'word' => $_GET['word'], 'sentence' => $styleIt));
     });
 
 
