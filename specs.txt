@@ -1,0 +1,19 @@
+
+1. Behavior: word matches a single word exactly and returns number of matches
+    input: "owl", "owl"
+    expect: 1
+
+2. Behavior: word matches a single word, case insensitive and returns number of matches.
+    input: "owl", "Owl"
+    expect: 1
+
+3. Behavior: word does not match if part of another word and returns number of matches.
+    input: "owl", "howl"
+    expect: 0
+
+
+4. Behavior: counts the number of times the word matches (case insensitive, not within another word) and returns number of matches
+    input: "owl", "The great horned owl heard the wolf howl. Owl fact: an owl can turn its head 270 degrees."
+    expect: 3
+
+ 
