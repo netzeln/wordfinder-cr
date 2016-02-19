@@ -33,8 +33,9 @@ class WordFinder {
     function countWords()
     {
         $counter = 0;
+        $downCaseSentence = strtolower($this->sentence);
 
-        if ($this->word == $this->sentence)
+        if ($this->word == $downCaseSentence)
         {
             ++$counter;
         }
