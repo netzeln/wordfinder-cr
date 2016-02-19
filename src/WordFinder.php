@@ -32,7 +32,7 @@ class WordFinder {
 
     function countWords()
     {
-        return preg_match_all("/\b($this->word\b)/i", $this->sentence, $matched);
+        return preg_match_all("/\b($this->word)\b/i", $this->sentence, $matched);
         //// THIS IS THE FIRST WAY I DID IT BECAUSE IT MADE FOR MORE SPEC TESTING
         // $counter = 0;
         // $downCaseSentence = strtolower($this->sentence);
@@ -46,5 +46,11 @@ class WordFinder {
         // }
         // return $counter;
     }
+
+    function countWordsPluralOK()
+    {
+        return preg_match_all("/\b($this->word+?)(s\b|\b)/i", $this->sentence, $matched);
+    }
+
 
 } ?>

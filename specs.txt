@@ -16,4 +16,12 @@
     input: "owl", "The great horned owl heard the wolf howl. Owl fact: an owl can turn its head 270 degrees."
     expect: 3
 
- 
+
+ADDITIONAL tests
+5. Behavior: counts the number of times the word matches (case insensitive, exact word mach) in a sentence with standard punctuation and returns the number of matches.
+    input: "owl", "I love an owl: barn owl, horned owl, snowy owl and howl owl!"
+    expect: 5
+
+6. Behavior: counts the number of times the word matches (case insensitive exact word match) in a sentence with standard punctuation and includes simple plurals.
+    input: "Owl", "I love owls. I am an owl lover."
+    expect: 2

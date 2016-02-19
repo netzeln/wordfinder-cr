@@ -14,9 +14,17 @@
 
     $app->get('/display', function() use ($app){
         $newWordFinder = new WordFinder($_GET['word'], $_GET['sentence']);
-        $count = $newWordFinder->countWords();
+        echo($_GET['pluralOK']);
+        if($_GET['pluralOK'] == "yes")
+        {
+            $count = $newWordFinder->countWordsPluralOK();
+        }
+        else {
+            $count = $newWordFinder->countWords();
+        }
+
       return $app['twig']->render("index.html.twig", array('count' => $count, 'word' => $_GET['word'], 'sentence' => $_GET['sentence']));
-  });
+    });
 
 
 

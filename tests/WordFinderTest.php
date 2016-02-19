@@ -64,6 +64,19 @@ class  WordFinderTest  extends PHPUnit_Framework_TestCase{
 
     }
 
+    function test_WordFinder_sentence_pluralsimple()
+    {
+        //arrange
+        $test_WordFinder = new WordFinder("owl", "I love owls. I am an owl lover.");
+
+        //act
+        $result = $test_WordFinder->countWordsPluralOK();
+
+        //assert
+        $this->assertEquals(2, $result);
+
+    }
+
 
 }
  ?>
