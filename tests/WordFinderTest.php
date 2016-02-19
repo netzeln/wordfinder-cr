@@ -51,6 +51,8 @@ class  WordFinderTest  extends PHPUnit_Framework_TestCase{
         $this->assertEquals(3, $result);
     }
 
+    
+
 
 }
  ?>
