@@ -28,7 +28,7 @@
                           <input type="radio" name="pluralOK" id="pluralOK1" value="yes"> YES
                     </label>
                     <label class="radio-inline">
-                          <input type="radio" name="pluralOK" id="pluralOK2" value="no" checked> No
+                          <input type="radio" name="pluralOK" id="pluralOK2" value="nope" checked> No
                     </label>
                 </div>
 
@@ -39,7 +39,7 @@
         </div>
         <div class="container results">
             {% if count is not empty %}
-            <h2>The word: <strong> <span class="theWord">{{word}}</strong></span> appears in the sentence <em>"{{sentence}}"</em><span class="theCount"> {{count}}</span> times!</h2>
+            <h2>The word: "<strong><span class="theWord">{{word}}</span></strong>" appears <span class="theCount"> {{count}}</span> times in the sentence: <em>"{{sentence | raw }}"</em></h2>
             {% endif %}
 
 

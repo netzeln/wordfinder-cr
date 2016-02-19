@@ -18,7 +18,9 @@ _User enters a word to find and a sentence to search. The app returns the number
 
 ## Known Bugs
 
-_In its non-Regular Expression version it will only match an exact (albeit case insensitive) string, not the actual "word" ignoring punctuation_
+_In its non-Regular Expression version it will only match an exact (albeit case insensitive) string, not the actual "word" ignoring punctuation.
+
+In the Regular-Expression version there was an attempt to add styling that would highlight the chosen word, but it did not maintain punctuation or capitalization or plural-ness_
 
 ## Support and contact details
 

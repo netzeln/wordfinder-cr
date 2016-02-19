@@ -5,3 +5,13 @@
 .theCount {
     color: red;
 }
+
+body {
+    background-color: #e8e8e8;
+
+}
+
+.results {
+    background-color: #bb8bb8;
+    border-radius: 15px;
+}
