@@ -27,5 +27,18 @@ class  WordFinderTest  extends PHPUnit_Framework_TestCase{
         $this->assertEquals(1, $result);
     }
 
+    function test_WordFinder_nopartial()
+    {
+        //arrange
+        $test_WordFinder = new WordFinder("owl", "howl");
+
+        //act
+        $result = $test_WordFinder->countWords();
+
+        //assert
+        $this->assertEquals(0, $result);
+    }
+
+
 }
  ?>
