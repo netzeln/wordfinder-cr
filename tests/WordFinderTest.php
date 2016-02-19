@@ -39,6 +39,18 @@ class  WordFinderTest  extends PHPUnit_Framework_TestCase{
         $this->assertEquals(0, $result);
     }
 
+    function test_WordFinder_sentence()
+    {
+        //arrange
+        $test_WordFinder = new WordFinder("owl", "The great horned owl heard the wolf howl. Owl fact: an owl can turn its head 270 degrees.");
+
+        //act
+        $result = $test_WordFinder->countWords();
+
+        //assert
+        $this->assertEquals(3, $result);
+    }
+
 
 }
  ?>

@@ -34,12 +34,14 @@ class WordFinder {
     {
         $counter = 0;
         $downCaseSentence = strtolower($this->sentence);
+        $sentenceAsWords = explode(" ", $downCaseSentence);
 
-        if ($this->word == $downCaseSentence)
-        {
-            ++$counter;
+        foreach($sentenceAsWords as $wordInSentence){
+        if ($this->word == $wordInSentence)
+            {
+                ++$counter;
+            }
         }
-
         return $counter;
     }
 
