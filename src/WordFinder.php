@@ -32,17 +32,19 @@ class WordFinder {
 
     function countWords()
     {
-        $counter = 0;
-        $downCaseSentence = strtolower($this->sentence);
-        $sentenceAsWords = explode(" ", $downCaseSentence);
-
-        foreach($sentenceAsWords as $wordInSentence){
-        if ($this->word == $wordInSentence)
-            {
-                ++$counter;
-            }
-        }
-        return $counter;
+        return preg_match_all("/\b($this->word\b)/i", $this->sentence, $matched);
+        //// THIS IS THE FIRST WAY I DID IT BECAUSE IT MADE FOR MORE SPEC TESTING
+        // $counter = 0;
+        // $downCaseSentence = strtolower($this->sentence);
+        // $sentenceAsWords = explode(" ", $downCaseSentence);
+        //
+        // foreach($sentenceAsWords as $wordInSentence){
+        // if ($this->word == $wordInSentence)
+        //     {
+        //         ++$counter;
+        //     }
+        // }
+        // return $counter;
     }
 
 } ?>

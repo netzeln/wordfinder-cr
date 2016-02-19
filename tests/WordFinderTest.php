@@ -51,7 +51,18 @@ class  WordFinderTest  extends PHPUnit_Framework_TestCase{
         $this->assertEquals(3, $result);
     }
 
-    
+    function test_WordFinder_sentence_punctuated()
+    {
+        //arrange
+        $test_WordFinder = new WordFinder("owl", "I love an owl: barn owl, horned owl, snowy owl and howl owl!");
+
+        //act
+        $result = $test_WordFinder->countWords();
+
+        //assert
+        $this->assertEquals(5, $result);
+
+    }
 
 
 }
