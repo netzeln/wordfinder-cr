@@ -2,7 +2,7 @@
 
 #### Counts instances of a Word in Sentence, 2016-02-19_
 
-#### By _**{Nic Netzel**_
+#### By _**Nic Netzel**_
 
 ## Description
 
